@@ -1,0 +1,754 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+@keyframes fadeIn {  
+    from {  
+        opacity:0;  
+    }  
+ 
+    to {  
+        opacity:1;  
+    }  
+ }
+
+
+
+@font-face {
+    font-family: "Gotham";
+    src: url(/Users/mariovegapino/Projects/dentmetica/Gotham-Black-Regular/Gotham-Black-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Myriad";
+    src: url(/Users/mariovegapino/Projects/dentmetica/myriad-pro-cufonfonts/MYRIADPRO-REGULAR.OTF) format('opentype');
+}
+
+@font-face {
+    font-family: "Gotham light";
+    src: url(/Users/mariovegapino/Projects/dentmetica/Gotham-Font/GothamLight.ttf) format('truetype');
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 8.25rem;
+    margin-top: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}    
+
+
+.logo {
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    font-family: "Gotham";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.25rem;
+    background-color: #bce0e5;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+    overflow-y: hidden;
+    
+
+}
+
+.logo h1{
+    color: white;
+    margin-bottom: 0;
+    font-size: 50px;
+    margin-top: 15px;
+    padding-bottom: 0;
+    
+    
+}
+
+.logo p{
+    color: white;
+    font-size: 15px;
+    
+}
+
+.logo .img{
+    margin-right: 0;
+}
+.logo .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1;
+   
+    margin-left: 10px;
+    margin-top: 0px;
+    padding-top: 0;
+
+}
+
+.logo .text p{
+    margin-top: 0;
+    padding-top: 0;
+    font-family: "Gotham light";
+
+}
+
+.underline{
+   font-family: "Gotham light";
+   font-size: small;
+   color: white;
+   position:absolute;
+   margin-top: 16px;
+}
+
+
+
+#icon {
+    width: 60px;
+    height: 70px;
+    
+    margin-right: 0;
+
+
+}
+
+
+.navbar {
+    width: 100%;
+    height: 2rem;
+    margin-top: 0;
+    background-color:white;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+   
+
+   
+}
+
+
+  
+.menu {
+    /*width: 100%;
+    height: 20px;*/
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu a {
+    font-family: "Myriad";
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: #fbc5c5;
+    
+    margin-top: 0px;
+}
+
+  
+.menu a:hover {
+    color: #bce0e5;
+    transform: scale(1.2, 1.2);
+    transition: 0.3s ease;
+  }
+  
+
+  
+.carrousel{
+    width: 100%;
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    
+    
+    
+    
+}
+.carrousel .grande{
+    width: 300%;
+    background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
+    
+    
+}
+.carrousel .img{
+    width: calc( 100% / 3 );
+    animation: fadeIn 2s ease-in; 
+    transform: translateX(0%);
+}
+.carrousel .puntos{
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel .punto{
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    margin: 0.3em 0.3em 0.3em;
+    background-color: #bce0e5;
+
+}
+
+.carrousel .punto.activo{
+    background-color: #fbc5c5;
+
+}
+
+.nosotros {
+    background-color: white;
+    width: 100%;
+    height: 50rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    border-radius: 1.25rem;
+
+}
+
+.infoandfoto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+.nosotros a{
+    text-decoration: none;
+}
+
+.nosotros h2 {
+    text-align: center;
+    font-family: 'Gotham';
+    padding-top: 4.5rem;
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+    color:  #bce0e5;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    text-decoration: none;
+    /*text-shadow: 3px 3px 3px #06444c;*/
+  
+}
+
+.nosotros h2:hover{
+    text-decoration: none;
+    transform: scale(1.05, 1.05);
+    color: #f9afaf;
+}
+
+.nosotros p{
+    font-family: 'Gotham light';
+    color:  #06444c;
+    line-height: 1.7rem;
+    font-size: 1.39rem;
+    /*text-shadow: 2px 2px 2px #06444c;*/
+    
+
+}
+.nosinfo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    margin: 4.3rem 4.3rem 4.3rem 12.5rem;
+    text-align: justify;
+    
+    
+    
+}
+
+
+
+#dra{
+    display: flex;
+    justify-content: flex-end;
+    width: 30rem;
+    border-radius: 15rem;
+    margin: 3.12rem 12.5rem 3.12rem 3.12rem;
+    background-color: #fbc5c5;
+    padding: 0rem 0.1rem 0.1rem 0rem;
+    box-shadow: 5px 5px 5px  #fbc5c5/*#06444c*/;
+
+}
+
+.servicios {
+    background-color: white;
+    width: 100%;
+    height: 50rem;
+    display: block;
+    margin-top: 5rem;
+    
+   
+}
+
+.servinfo {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 5rem;
+    
+
+}
+ 
+#protesis {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+}
+
+#ortodoncia {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+#blanquea {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.servicios h2{
+    text-align: center;
+    font-family: 'Gotham';
+    padding-top: 4.5rem;
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+    color:  #bce0e5;
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+
+.servicios a{
+    text-decoration: none;
+}
+
+.servicios h2:hover{
+    text-decoration: none;
+    transform: scale(1.05, 1.05);
+    color: #f9afaf;
+}
+
+.servinfo p{
+    font-family: 'Gotham light';
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: #06444c;
+    text-align: justify;
+    margin-top: 3rem;
+}
+.servinfo img{
+    width: 25rem;
+    height: 16.5rem;
+    border-radius: 0.5rem;
+}
+
+
+#bold {
+    color: #f9afaf;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 1px #06444c;
+
+}
+
+
+.consejos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+   
+}
+
+.tips {
+    width: 100%;
+    height: 50rem;
+    background-color: white;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+    margin-left: 3rem;
+    overflow: hidden;
+    display: block;
+    
+
+}
+
+.tips h2{
+  text-align: center;
+  font-family: 'Gotham';
+  color:  #bce0e5;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin-bottom: 1.5rem;
+
+}
+
+.tips a{
+    text-decoration: none;
+} 
+.tips h2:hover{
+    text-decoration: none;
+    transform: scale(1.05, 1.05);
+    color: #f9afaf;
+}
+
+.tips .peque {
+    width: 100%;
+    /*margin-right: 33%;*/
+    margin-top: 2rem;
+    margin-left: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    /*overflow: hidden;*/
+    transform: translateX(0%);
+
+    
+
+}
+
+.tips .img2{ 
+    width: 70%;
+    height: auto;
+    /*margin-right: 33%;*/
+    margin-left: 40%;
+    border-radius: 3rem;
+
+}
+
+.tips .dots{
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.tips .dot{
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    margin: 0.3em 0.3em 0.3em;
+    background-color: #bce0e5;
+
+}
+
+.tips .dot.activo{
+    background-color: #fbc5c5;
+
+}
+
+.caries{
+    width: 100%;
+    height: 50rem;
+    background-color: white;
+    margin-right: 3rem;
+    margin-top: 4rem;
+    margin-bottom:0rem;
+    overflow: hidden;
+    display: block;
+}
+
+.caries h3{
+    text-align: center;
+    font-family: 'Gotham';
+    color:  #bce0e5;
+    font-size: 2rem;
+    letter-spacing: 0px;
+    margin-bottom: 1.5rem;
+}
+.caries a{
+    text-decoration: none;
+} 
+.caries h3:hover{
+    text-decoration: none;
+    transform: scale(1.05, 1.05);
+    color: #f9afaf;
+}
+
+.caries .carie {
+    width: 100%;
+    /*margin-right: 33%;*/
+    margin-top: 2rem;
+    margin-left: 216%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    /*overflow: hidden;*/
+    transform: translateX(0%);
+    animation: none;
+    
+
+}
+
+.caries .img3{ 
+    width: 70%;
+    height: auto;
+    /*margin-right: 33%;*/
+    margin-left: 50%;
+    border-radius: 3rem;
+    box-shadow: 5px 5px 5px 5px  #fbc5c5;
+   
+    
+
+}
+
+.caries .points{
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.caries .point{
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    margin: 0.3em 0.3em 0.3em;
+    background-color: #bce0e5;
+
+}
+
+.caries .point.activo{
+    background-color: #fbc5c5;
+
+}
+
+
+#contact {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    height: 30rem;
+}
+
+.contact {
+    background-color: #f8dada;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 2rem;
+    margin-left: 0px;
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    gap:70px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact .icon {
+    width: 95px;
+    opacity: 75%;
+    
+}
+
+.contact .img4{
+    width: 100px;
+    margin-left: 0rem;
+    
+}
+.contact .img4:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.contact .img5{
+    width: 100px;
+    margin-left: 2rem;
+    
+}
+.contact .img5:hover{
+    transform: scale(1.1, 1.1);
+}
+
+#contact h2{
+    text-align: center;
+    font-family: 'Gotham';
+    color:  #bce0e5;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 5rem;
+    
+  
+  }
+  
+#contact a{
+    text-decoration: none;
+  } 
+#contact h2:hover{
+    text-decoration: none;
+    transform: scale(1.05, 1.05);
+    color: #f9afaf;
+}
+#contact h3{
+    text-align: center;
+    font-family: "Myriad";
+    color: #4c929c;
+}
+
+#contact p{
+    text-align: center;
+    font-family: "Myriad";
+    color: #06444c;
+}
+
+.icon {
+    width: 3rem;
+}
+
+.icon:hover{
+    transform: scale(1.1, 1.1);
+}
+.ubicacion {
+    background-color: white;
+    width: 100%;
+    height: 60rem;
+    display: block;
+    margin-top: 10rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    /*padding-bottom: 5rem;*/
+}
+
+.ubicacion h2{
+    text-align: center;
+    font-family: 'Gotham';
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+    color:  #bce0e5;
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+
+.ubicacion a{
+    text-decoration: none;
+}
+
+.ubicacion h2:hover{
+    text-decoration: none;
+    transform: scale(1.05, 1.05);
+    color: #f9afaf;
+}
+
+.croquis {
+    margin-left: 12rem;
+}
+
+.croquis img{
+    box-shadow: 5px 5px 5px 5px  #fbc5c5;
+    border-radius: 4rem;
+
+}
+
+.waze {
+    margin-left: 2rem;
+    margin-right: 7rem;
+}
+
+.waze p{
+    font-family: "Gotham light";
+    font-size: 1.5rem;
+    text-align: center;
+    color: #4c929c;
+    line-height: 2rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.waze h3{
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Myriad";
+    color: #06444c;
+}
+
+.waze img{
+    width: 10rem;
+    margin-left: 12rem;
+}
+
+.waze img:hover{
+    transform: scale(1.5, 1.5);
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+}
+.footer p{
+    font-family: "Myriad";
+    color:#06444c;
+    font-size: 1rem;
+}
