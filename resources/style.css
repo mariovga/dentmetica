@@ -1,9 +1,9 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
+html {
+    font-family: "Atlata", sans-serif;
     font-size: 16px;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 @keyframes fadeIn {  
@@ -20,24 +20,23 @@ body {
 
 @font-face {
     font-family: "Gotham";
-    src: url(/Users/mariovegapino/Projects/dentmetica/Gotham-Black-Regular/Gotham-Black-Regular.ttf) format('truetype');
+    src: url(/Users/mariovegapino/Projects/dentmetica/resources/font/Gotham-Black-Regular/Gotham-Black-Regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: "Myriad";
-    src: url(/Users/mariovegapino/Projects/dentmetica/myriad-pro-cufonfonts/MYRIADPRO-REGULAR.OTF) format('opentype');
+    src: url(/Users/mariovegapino/Projects/dentmetica/resources/font/myriad-pro-cufonfonts/MYRIADPRO-REGULAR.OTF) format('opentype');
 }
 
 @font-face {
     font-family: "Gotham light";
-    src: url(/Users/mariovegapino/Projects/dentmetica/Gotham-Font/GothamLight.ttf) format('truetype');
+    src: url(/Users/mariovegapino/Projects/dentmetica/resources/font/Gotham-Font/GothamLight.ttf) format('truetype');
 }
 
 
-.header {
+header {
     position: fixed;
     width: 100%;
-    height: 8.25rem;
     margin-top: 0;
     top: 0;
     z-index: 1000;
@@ -45,7 +44,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-}    
+}  
 
 
 .logo {
@@ -56,20 +55,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6.25rem;
+
     background-color: #bce0e5;
     padding-bottom: 0;
     margin-bottom: 0px;
     overflow-y: hidden;
-    
 
+}
+
+.contactanos{
+    visibility: hidden;
 }
 
 .logo h1{
     color: white;
     margin-bottom: 0;
-    font-size: 50px;
-    margin-top: 15px;
+    font-size: 3.125rem;
+    margin-top: 1rem;
     padding-bottom: 0;
     
     
@@ -77,7 +79,7 @@ body {
 
 .logo p{
     color: white;
-    font-size: 15px;
+    font-size: 1rem;
     
 }
 
@@ -91,8 +93,8 @@ body {
     flex-direction: column;
     line-height: 1;
    
-    margin-left: 10px;
-    margin-top: 0px;
+    margin-left: 0.625rem;
+    margin-top: 0rem;
     padding-top: 0;
 
 }
@@ -109,14 +111,14 @@ body {
    font-size: small;
    color: white;
    position:absolute;
-   margin-top: 16px;
+   margin-top: 1rem;
 }
 
 
 
 #icon {
-    width: 60px;
-    height: 70px;
+    max-width: 3.75rem;
+    height: 4.375rem;
     
     margin-right: 0;
 
@@ -129,24 +131,20 @@ body {
     height: 2rem;
     margin-top: 0;
     background-color:white;
-    padding: 0px;
+    padding: 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
    
-
-   
 }
-
-
-  
+ 
 .menu {
     /*width: 100%;
     height: 20px;*/
     display: flex;
     list-style: none;
-    gap: 50px;
+    gap: 3.125rem;
     align-items: center;
     justify-content: center;
 }
@@ -155,15 +153,15 @@ body {
     font-family: "Myriad";
     text-decoration: none;
     font-size: 1.2rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
     color: #fbc5c5;
     
-    margin-top: 0px;
+    margin-top: 0rem;
 }
 
   
@@ -178,13 +176,10 @@ body {
 .carrousel{
     width: 100%;
     background-color: white;
-    margin-top: 0px;
+    margin-top: 0rem;
     margin-bottom: 1rem;
     overflow: hidden;
-    
-    
-    
-    
+        
 }
 .carrousel .grande{
     width: 300%;
@@ -231,12 +226,10 @@ body {
 .nosotros {
     background-color: white;
     width: 100%;
-    height: 50rem;
     display: block;
-    justify-content: center;
-    align-items: center;
+   
     margin-top: 5rem;
-    border-radius: 1.25rem;
+
 
 }
 
@@ -258,7 +251,7 @@ body {
     margin-top: 1rem;
     color:  #bce0e5;
     font-size: 3rem;
-    letter-spacing: 5px;
+    letter-spacing: 0.3125rem;
     text-decoration: none;
     /*text-shadow: 3px 3px 3px #06444c;*/
   
@@ -284,9 +277,7 @@ body {
     flex-direction: column;
     padding-top: 1.5rem;
     margin: 4.3rem 4.3rem 4.3rem 12.5rem;
-    text-align: justify;
-    
-    
+    text-align: justify;    
     
 }
 
@@ -307,7 +298,6 @@ body {
 .servicios {
     background-color: white;
     width: 100%;
-    height: 50rem;
     display: block;
     margin-top: 5rem;
     
@@ -391,7 +381,7 @@ body {
 #bold {
     color: #f9afaf;
     font-size: 1.5rem;
-    text-shadow: 1px 1px 1px #06444c;
+    text-shadow: .0625rem .0625rem .0625rem #06444c;
 
 }
 
@@ -408,7 +398,7 @@ body {
 
 .tips {
     width: 100%;
-    height: 50rem;
+    height: auto;
     background-color: white;
     margin-top: 4rem;
     margin-bottom: 0rem;
@@ -490,7 +480,7 @@ body {
 
 .caries{
     width: 100%;
-    height: 50rem;
+    height: auto;
     background-color: white;
     margin-right: 3rem;
     margin-top: 4rem;
@@ -539,7 +529,7 @@ body {
     /*margin-right: 33%;*/
     margin-left: 50%;
     border-radius: 3rem;
-    box-shadow: 5px 5px 5px 5px  #fbc5c5;
+    box-shadow: .3125rem .3125rem .3125rem .3125rem  #fbc5c5;
    
     
 
@@ -587,7 +577,7 @@ body {
     margin-right: 0;
     width: 100%;
     display: flex;
-    gap:70px;
+    gap: 4.375rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -595,7 +585,7 @@ body {
 }
 
 .contact .icon {
-    width: 95px;
+    width: 5.9rem;
     opacity: 75%;
     
 }
@@ -627,7 +617,7 @@ body {
     margin-bottom: 5rem;
     
   
-  }
+}
   
 #contact a{
     text-decoration: none;
@@ -751,4 +741,89 @@ body {
     font-family: "Myriad";
     color:#06444c;
     font-size: 1rem;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    
+    html{
+        margin-right: 0;
+    }
+    header{
+        margin-left: 0;
+        position: fixed;
+
+    }
+    main{
+        margin-right: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    
+    .logo {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding-left: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .contactanos{
+        visibility: visible;
+        font-size: 1.7rem;
+        color: #f9afaf;
+        text-shadow: 5px 5px 5px 5px #f24f4f;
+        margin-left: 43rem;
+    }
+
+    .contactanos a{
+        text-decoration: none;
+        color: #f9afaf;
+        text-shadow: 5px 5px 5px 5px #f24f4f;
+    }
+    
+
+
+    .navbar{
+        visibility: hidden;
+    }
+    
+    .carrousel{
+        width: 370%;
+        overflow: hidden;
+    }
+
+    .nosotros{
+        width: 350%;
+    }
+
+    .servicios {
+        width: 350%;
+    }
+
+    .consejos {
+        width: 350%;
+        display: block;
+        
+    }
+
+    #contact {
+        width: 370%;
+    }
+
+    .ubicacion {
+        width: 350%;
+    }
+   
+
+    footer{
+        width: 350%;
+    }
+        
+
+
+
 }
